@@ -1,0 +1,180 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background-color: rgb(73, 73, 73);
+}
+
+.navbar {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-side-nav {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    color: rgb(236, 236, 236);
+    font-size: 1.1rem;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(236, 236, 236);   
+}
+
+a:hover {
+    border-bottom: 2px solid rgb(236, 236, 236);
+    padding-bottom: 0.4em;
+}
+
+li {
+    list-style: none;
+}
+
+form input {
+    padding: 0.7em 1em;
+    border-radius: 7px;
+    border: none;
+}
+
+form input:focus,
+form .btn:focus {
+    outline: none;
+}
+
+textarea:focus {
+    outline: #0785d3;
+}
+
+#notes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card {
+    border: 1px solid rgb(233, 233, 233);
+    padding: 0 1em 1em 1em;
+    border-radius: 5px;
+    margin: 0.5em 0;
+}
+
+.card button {
+    padding: 0.5em 1em;
+    background-color: #1491df;
+    border: none;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.card button:hover {
+    background-color: #0785d3;
+}
+
+form .btn {
+    padding: 0.7em 1.6em;
+    border: 1px solid rgb(14, 104, 14);
+    background-color: transparent;
+    border-radius: 10px;
+    color: rgb(14, 104, 14);
+}
+
+.btn:hover {
+    color: #fff;
+    background-color: rgb(14, 104, 14);
+}
+
+.container {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.container h1 {
+    font-size: 2.3rem;
+    margin: 0;
+}
+
+.margin-top {
+    margin-top: 0.5em;
+}
+
+.hr {
+    border-top: 1px solid rgb(233, 233, 233);
+    border-bottom: none;
+}
+
+.note-adding {
+    border: 1px solid rgb(233, 233, 233);
+    padding: 1em;
+    border-radius: 5px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+textarea {
+    border: 1px solid rgb(233, 233, 233);
+    border-radius: 5px;
+    margin: 0.5em 0;
+}
+
+.note-btn {
+    padding: 0.5em 1.1em;
+    background-color: #1491df;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.note-btn:hover {
+    background-color: #0785d3;
+}
+
+.note-btn:focus,
+.card button:focus {
+    outline: none;
+}
+
+/* responsiveness */
+
+@media (max-width: 1364px) {
+    textarea {
+        width: 45vw;
+    }
+}
+
+@media (max-width: 900px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 560px) {
+    .container {
+        text-align: center;
+    }
+    .navbar {
+        flex-direction: column;
+    }
+    form {
+        margin-bottom: 1em;
+    }
+}

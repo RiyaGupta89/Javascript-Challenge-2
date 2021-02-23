@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Notes Website</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header>
+            <nav class="navbar">
+                <div class="left-side-nav">
+                    <div class="logo">
+                        <h1>Magic Notes</h1>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <form>
+                    <input type="text" id="searchTxt" placeholder="Search Notes">
+                    <button class="btn">Search</button>
+                </form>
+            </nav>
+        </header>
+        <div class="container">
+            <hr class="hr">
+            <h1>Welcome to Magic Notes</h1>
+            <div class="note-adding margin-top">
+                <label for="note">Add a Note</label> <br>
+                <textarea name="note" id="note-text" cols="90" rows="5" value="vfd"></textarea> <br>
+                <button class="note-btn">Add Note</button>
+            </div>
+
+            <hr class="hr">
+            <h1>Your Notes</h1>
+            <hr class="hr">
+            <div id="notes">
+                
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
