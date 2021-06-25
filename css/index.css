@@ -1,65 +1,99 @@
-*, *::before, *::after {
-    box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
-body {
-    margin: 0;
+*, *::after, *::before {
     padding: 0;
-    font-family: 'Roboto', sans-serif;
-}
-
-header {
-    background-color: rgb(73, 73, 73);
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .navbar {
-    width: 95%;
-    margin: 0 auto;
+    background-color: rgb(236, 189, 87);
+    height: 80px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    color: white;
+    justify-content: space-between;
 }
 
-.left-side-nav {
+.left {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px;
 }
 
 .logo {
-    color: rgb(236, 236, 236);
-    font-size: 1.1rem;
+    font-size: 40px;
 }
 
-a {
-    text-decoration: none;
-    color: rgb(236, 236, 236);   
-}
-
-a:hover {
-    border-bottom: 2px solid rgb(236, 236, 236);
-    padding-bottom: 0.4em;
-}
-
-li {
+ul li {
+    padding-left: 30px;
     list-style: none;
 }
 
-form input {
-    padding: 0.7em 1em;
-    border-radius: 7px;
-    border: none;
+ul li a {
+    text-decoration: none;
+    color: white;
 }
 
-form input:focus,
-form .btn:focus {
+ul li a:hover {
+    padding-bottom: 5px;
+    border-bottom: 2px solid white;
+}
+
+.searchBox {
+    padding-right: 20px;
+}
+
+#searchTxt {
+    border: none;
+    padding: 5px 10px;
+    /* border-radius: 9px; */
+}
+
+.btn {
+    border: 1px solid #111;
+    padding: 6px 19px;
+    /* border-radius: 9px; */
+}
+
+.btn:hover {
+    background-color: #111;
+    color: white;
+}
+
+input:focus {
     outline: none;
 }
 
-textarea:focus {
-    outline: #0785d3;
+.wrapper {
+    margin-left: 20px;
 }
 
-#notes {
+.heading {
+    padding: 10px 0;
+}
+
+.note-btn {
+    background-color: rgb(236, 189, 87);
+    border: none;
+    padding: 12px 27px;
+    border-radius: 25px;
+    margin: 15px 0;
+    color: white;
+    font-size: 17px;
+}
+
+.note-btn:hover {
+    background-color: rgb(238, 173, 31);
+}
+
+.class {
+    padding: 10px 0;
+}
+
+.showNotes {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -67,114 +101,25 @@ textarea:focus {
 }
 
 .card {
-    border: 1px solid rgb(233, 233, 233);
-    padding: 0 1em 1em 1em;
-    border-radius: 5px;
-    margin: 0.5em 0;
-}
-
-.card button {
-    padding: 0.5em 1em;
-    background-color: #1491df;
-    border: none;
-    font-size: 0.8rem;
-    border-radius: 5px;
-    color: #fff;
-}
-
-.card button:hover {
-    background-color: #0785d3;
-}
-
-form .btn {
-    padding: 0.7em 1.6em;
-    border: 1px solid rgb(14, 104, 14);
-    background-color: transparent;
+    margin: 10px;
+    border: 3px solid gray;
     border-radius: 10px;
-    color: rgb(14, 104, 14);
+    padding: 20px;
 }
 
-.btn:hover {
-    color: #fff;
-    background-color: rgb(14, 104, 14);
-}
-
-.container {
-    width: 50%;
-    margin: 0 auto;
-}
-
-.container h1 {
-    font-size: 2.3rem;
-    margin: 0;
-}
-
-.margin-top {
-    margin-top: 0.5em;
-}
-
-.hr {
-    border-top: 1px solid rgb(233, 233, 233);
-    border-bottom: none;
-}
-
-.note-adding {
-    border: 1px solid rgb(233, 233, 233);
-    padding: 1em;
-    border-radius: 5px;
-}
-
-label {
-    font-weight: bold;
-    font-size: 1.1rem;
-}
-
-textarea {
-    border: 1px solid rgb(233, 233, 233);
-    border-radius: 5px;
-    margin: 0.5em 0;
-}
-
-.note-btn {
-    padding: 0.5em 1.1em;
-    background-color: #1491df;
+.deleteBtn {
+    background-color: rgb(238, 173, 31);
     border: none;
-    font-size: 1rem;
-    border-radius: 5px;
-    color: #fff;
+    border-radius: 10px;
+    padding: 8px 19px;
+    margin-top: 10px;
+    color: white;
 }
 
-.note-btn:hover {
-    background-color: #0785d3;
+.deleteBtn:hover {
+    background-color: rgb(204, 142, 9);
 }
 
-.note-btn:focus,
-.card button:focus {
-    outline: none;
-}
-
-/* responsiveness */
-
-@media (max-width: 1364px) {
-    textarea {
-        width: 45vw;
-    }
-}
-
-@media (max-width: 900px) {
-    .container {
-        width: 90%;
-    }
-}
-
-@media (max-width: 560px) {
-    .container {
-        text-align: center;
-    }
-    .navbar {
-        flex-direction: column;
-    }
-    form {
-        margin-bottom: 1em;
-    }
+.wrapper input {
+    padding: 3px 15px;
 }

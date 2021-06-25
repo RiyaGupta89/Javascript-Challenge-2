@@ -15,9 +15,14 @@ button.addEventListener("click", function (e) {
         textArea: textArea.value
     }
 
+
+
+
+
     notesObj.push(myObj);
     localStorage.setItem("notes", JSON.stringify(notesObj));
     textArea.value = '';
+    title.value = '';
     showNotes();
 });
 
@@ -35,16 +40,20 @@ function showNotes() {
             html += `
         <div>
         <div class="card">
-            <h2>${element.title} </h2>
-            <p>${element.textArea}</p>
-            <button onClick="deleteNote(this.id)" id="${index}">Delete Note</button>
+            <h2>${element.textArea} </h2>
+            <p>${element.title}</p>
+            <button onClick="deleteNote(this.id)" id="${index}" class="deleteBtn">Delete Note</button>
         </div>
         </div>`;
     });
 
-    const insertNotes = document.getElementById("notes");
+    let insertNotes = document.getElementById("notes");
     if (notesObj.length == 0) {
-        insertNotes.innerHTML = `Nothing to show! Please click on "Add a Note" button to add a new note.`
+        
+        insertNotes.innerHTML = `Nothing to show! Please click on "Schedule Batch" button to add a new class.`
+        insertNotes.style.color = "gray";
+        insertNotes.style.paddingTop = "10px";
+        insertNotes.style.fontSize = "15px";
     } else {
         insertNotes.innerHTML = html;
     }
@@ -70,7 +79,7 @@ searchTxt.addEventListener("input", function () {
     console.log("input event fired", inputVal);
     let cards = document.getElementsByClassName("card");
     Array.from(cards).forEach(function (element) {
-        let cardTxt = element.getElementsByTagName('p')[0].innerHTML;
+        let cardTxt = element.getElementsByTagName('h2')[0].innerHTML;
         if (cardTxt.includes(inputVal)) {
             element.style.display = "block";
         } else {
